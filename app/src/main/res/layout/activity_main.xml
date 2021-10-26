@@ -5,10 +5,15 @@
 
     <data>
        <import type="android.view.View"/>
-        <import type="com.example.databindingfull.User"/>
+        <import type="com.example.databindingfull.User" />
+        <import type="java.util.List"/>
+        <import type="com.example.databindingfull.View" alias = "MyView"/>
        <variable
            name="user"
            type="User" />
+        <variable
+            name="userList"
+            type="List&lt;User>" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
