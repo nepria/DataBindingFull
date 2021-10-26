@@ -7,6 +7,7 @@
        <import type="android.view.View"/>
         <import type="com.example.databindingfull.User" />
         <import type="java.util.List"/>
+        <import type="com.example.databindingfull.MyUtilObject"/>
         <import type="com.example.databindingfull.View" alias = "MyView"/>
        <variable
            name="user"
@@ -14,6 +15,10 @@
         <variable
             name="userList"
             type="List&lt;User>" />
+        <import type="android.graphics.drawable.Drawable"/>
+        <variable
+            name="viewModel"
+            type="com.example.databindingfull.MyViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,8 +30,8 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
             android:textSize="19dp"
+            android:text="@{viewModel.message}"
             android:visibility="@{user.profileCompleted ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -34,7 +39,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.436" />
 
+<!--            android:text="@{MyUtilObject.changeText(user.lastName)}"-->
+
+
+
         <EditText
+            android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="84dp"
