@@ -1,8 +1,8 @@
 package com.example.databindingfull
 
 class User (
-    firstName : String = "",
-    lastName : String = "",
-    Age : Int = 0,
-    Profilecompleted : Boolean = false
+    val firstName : String = "",
+    val lastName : String = "",
+    val Age : Int ,
+    val profileCompleted : Boolean
 )

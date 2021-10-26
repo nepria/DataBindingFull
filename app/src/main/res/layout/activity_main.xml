@@ -5,7 +5,10 @@
 
     <data>
        <import type="android.view.View"/>
-
+        <import type="com.example.databindingfull.User"/>
+       <variable
+           name="user"
+           type="User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="Hello World!"
             android:textSize="19dp"
+            android:visibility="@{user.profileCompleted ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -30,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="84dp"
             android:textSize="16dp"
-            android:hint="Edit Text"
+            android:hint="@{user.firstName}"
             android:ems="10"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintStart_toStartOf="@+id/textView"
